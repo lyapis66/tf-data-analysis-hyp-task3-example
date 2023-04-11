@@ -6,7 +6,7 @@ chat_id = 1882360450 # Ваш chat ID, не меняйте название пе
 
 def solution(x: np.array) -> bool: # Одна или две выборке на входе, заполняется исходя из условия
     from statsmodels.stats.weightstats import ztest as ztest
-    a,p=ztest(x, value= 500, alternative="smaller")
+    a,p=ztest(x, value= 500, alternative="larger")
     if p<=0.02: 
         answer=True
     else:
